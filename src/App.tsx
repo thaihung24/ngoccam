@@ -1,6 +1,7 @@
-import reactLogo from './assets/react.svg'
+import reactLogo from './assets/whale-removebg-preview.png'
 import TypingEffect from './component/TypingEffect' // Import component TypingEffect
 import './App.css'
+
 function App() {
   return (
     <>
