@@ -21,25 +21,39 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes typewriter {
+  0% {
+    width: 0;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  100% {
+    width: 100%;
   }
 }
 
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+@layer utilities {
+  .animate-typewriter {
+    white-space: normal;
+    word-wrap: break-word; /* Đảm bảo văn bản không bị cắt */
+    overflow: hidden;
+    width: 0;
+    animation:
+      typewriter 5s steps(40) 1s 1 normal both,
+      blink 0.75s step-end infinite;
+    border-right: 3px solid black; /* Tạo đường gạch chớp */
+  }
+}
 .card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  text-align: left !important;
 }
