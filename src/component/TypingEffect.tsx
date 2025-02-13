@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 function TypingEffect() {
   const text =
@@ -8,7 +8,7 @@ function TypingEffect() {
   useEffect(() => {
     let index = 0
     const intervalId = setInterval(() => {
-      if (index < text.length-1) {
+      if (index < text.length - 1) {
         setDisplayedText((prev) => prev + text[index])
         index++
       } else {

@@ -11,8 +11,6 @@ function App() {
         </a>
       </div>
       <TypingEffect />
-
-
     </>
   )
 }
