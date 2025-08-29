@@ -25,6 +25,25 @@ body {
     animation: marquee 10s linear infinite;
   }
 }
+/* Layout cuộn ngang cho các card */
+.container {
+  overflow-x: scroll;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: 100vw;
+  height: 100vh;
+}
+
 .card {
-  word-wrap: break-word; /* Cho phép từ dài tự động xuống dòng */
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+  position: relative;
+  font-family: sans-serif;
 }
